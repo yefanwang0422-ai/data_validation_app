@@ -1,0 +1,92 @@
+[
+  {
+    "raw_column": "SKU",
+    "canonical_field": "product_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'SKU' is a known alias for 'product_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "Descr",
+    "canonical_field": "product_name",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Descr' is a known alias for 'product_name'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "Cat",
+    "canonical_field": "product_category",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Cat' is a known alias for 'product_category'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "WeightLbs",
+    "canonical_field": "weight",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'WeightLbs' is a known alias for 'weight'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "WeightUOM",
+    "canonical_field": "weight_uom",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'WeightUOM' is a known alias for 'weight_uom'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "L_in",
+    "canonical_field": "length",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'L_in' is a known alias for 'length'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "W_in",
+    "canonical_field": "width",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'W_in' is a known alias for 'width'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "H_in",
+    "canonical_field": "height",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'H_in' is a known alias for 'height'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  },
+  {
+    "raw_column": "UnitsPerPallet",
+    "canonical_field": "units_per_pallet",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'UnitsPerPallet' is a known alias for 'units_per_pallet'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T18:59:21.147222+00:00"
+  }
+]

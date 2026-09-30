@@ -1,0 +1,65 @@
+# ---------------------------------------------------------------------------
+# Project-specific ignores
+# ---------------------------------------------------------------------------
+
+# Data artifacts (large / generated)
+data/
+*.parquet
+*.csv
+*.xlsx
+
+# Logs / pids
+*.log
+*.pid
+
+# Environment / secrets
+.env
+.env.*
+frontend/.env.local
+frontend/.env.*.local
+
+# Graphify / Axet
+.graphify/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+.dist/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# ---------------------------------------------------------------------------
+# Node / Next.js
+# ---------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js build output
+frontend/.next/
+frontend/out/
+
+# ---------------------------------------------------------------------------
+# OS / Editor
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/

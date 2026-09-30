@@ -1,0 +1,332 @@
+[
+  {
+    "raw_column": "FSD Charge Distribution Rule",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'FSD Charge Distribution Rule'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "FSD Number",
+    "canonical_field": "shipment_id",
+    "confidence": 0.63,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'FSD Number' most closely resembles canonical field 'shipment_id' (similarity 0.63).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Posting Date",
+    "canonical_field": "shipment_date",
+    "confidence": 0.63,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Posting Date' most closely resembles canonical field 'shipment_date' (similarity 0.63).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Carrier",
+    "canonical_field": "carrier_name",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Carrier' is a known alias for 'carrier_name'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T16:45:09.446858+00:00"
+  },
+  {
+    "raw_column": "Customer",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Customer'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Plant",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Plant'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Plant Name",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Plant Name'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Sending Plant",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Sending Plant'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Receiving Plant",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Receiving Plant'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Delivery",
+    "canonical_field": "service_level",
+    "confidence": 0.76,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Delivery' most closely resembles canonical field 'service_level' (similarity 0.76).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Use Case Type",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Use Case Type'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Use Case Description",
+    "canonical_field": "destination_location_id",
+    "confidence": 0.55,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Use Case Description' most closely resembles canonical field 'destination_location_id' (similarity 0.55).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Document Number",
+    "canonical_field": "invoice_number",
+    "confidence": 0.58,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'SMD Document Number' most closely resembles canonical field 'invoice_number' (similarity 0.58).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Product",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Product'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Material Description",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Material Description'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Company Code",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'SMD Company Code'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Company Name",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'SMD Company Name'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "FSD Lifecycle Status",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'FSD Lifecycle Status'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Price per UoM",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Price per UoM'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Net Amount",
+    "canonical_field": "cost_amount",
+    "confidence": 0.73,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'SMD Net Amount' most closely resembles canonical field 'cost_amount' (similarity 0.73).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Item Net Amount",
+    "canonical_field": "discount_amount",
+    "confidence": 0.65,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'SMD Item Net Amount' most closely resembles canonical field 'discount_amount' (similarity 0.65).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Settlement Quantity",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Settlement Quantity'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Item Gross Weight",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'SMD Item Gross Weight'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Item Gross Volume",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'SMD Item Gross Volume'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "SMD Item Transported Distance",
+    "canonical_field": "shipment_mode",
+    "confidence": 0.56,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'SMD Item Transported Distance' most closely resembles canonical field 'shipment_mode' (similarity 0.56).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Road Cost",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Road Cost'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Other Cost",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Other Cost'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "FSD Charge Distribution %",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'FSD Charge Distribution %'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Number Of TEU",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Number Of TEU'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Freight Document Total Gross Weight",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Freight Document Total Gross Weight'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Freight Document Total Gross Volume",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Freight Document Total Gross Volume'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Freight Document Total Distance",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Freight Document Total Distance'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  },
+  {
+    "raw_column": "Freight Document Total TEU",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Freight Document Total TEU'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.417435+00:00"
+  }
+]

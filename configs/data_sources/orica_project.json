@@ -1,0 +1,34 @@
+{
+  "customer_master": {
+    "source_type": "sql",
+    "upload_filename": null
+  },
+  "location_master": {
+    "source_type": "sql",
+    "upload_filename": null
+  },
+  "vendor_master": {
+    "source_type": "sql",
+    "upload_filename": null
+  },
+  "product_master": {
+    "source_type": "sql",
+    "upload_filename": null
+  },
+  "production_history": {
+    "source_type": "none",
+    "upload_filename": null
+  },
+  "shipment_history": {
+    "source_type": "sql",
+    "upload_filename": null
+  },
+  "shipment_cost": {
+    "source_type": "sql",
+    "upload_filename": null
+  },
+  "inventory_history": {
+    "source_type": "sql",
+    "upload_filename": null
+  }
+}

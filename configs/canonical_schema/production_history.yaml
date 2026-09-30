@@ -1,0 +1,87 @@
+dataset: production_history
+canonical_fields:
+  # ---- Identifiers ----
+  - name: production_id
+    type: string
+    required: false
+    description: Unique production record identifier
+  - name: work_order_id
+    type: string
+    required: false
+    description: Work order / manufacturing order number
+  - name: batch_id
+    type: string
+    required: false
+    description: Batch / lot identifier
+  # ---- References ----
+  - name: location_id
+    type: string
+    required: true
+    description: Producing location (FK to location_master)
+  - name: location_name
+    type: string
+    required: false
+    description: Facility name (denormalized)
+  - name: product_id
+    type: string
+    required: true
+    description: Product produced (FK to product_master)
+  - name: product_name
+    type: string
+    required: false
+    description: Product name (denormalized)
+  - name: product_category
+    type: string
+    required: false
+    description: Product category (denormalized)
+  # ---- Dates ----
+  - name: production_date
+    type: date
+    required: true
+    description: Date of production
+  - name: start_date
+    type: date
+    required: false
+    description: Production start date
+  - name: end_date
+    type: date
+    required: false
+    description: Production end date
+  # ---- Quantities ----
+  - name: quantity_produced
+    type: float
+    required: true
+    description: Actual quantity produced
+  - name: planned_quantity
+    type: float
+    required: false
+    description: Originally planned quantity
+  - name: reject_quantity
+    type: float
+    required: false
+    description: Rejected / scrap quantity
+  - name: yield_quantity
+    type: float
+    required: false
+    description: Usable yield quantity
+  - name: quantity_uom
+    type: string
+    required: false
+    description: Unit of measure for quantities
+  # ---- Operational ----
+  - name: line_id
+    type: string
+    required: false
+    description: Production line identifier
+  - name: shift
+    type: string
+    required: false
+    description: Shift designation (Day, Night, 1st, 2nd, 3rd)
+  - name: operator_id
+    type: string
+    required: false
+    description: Operator or crew identifier
+  - name: production_status
+    type: string
+    required: false
+    description: Status (Completed, In Progress, Cancelled)

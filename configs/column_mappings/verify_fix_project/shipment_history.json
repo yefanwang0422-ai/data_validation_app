@@ -1,0 +1,92 @@
+[
+  {
+    "raw_column": "ShipmentNbr",
+    "canonical_field": "shipment_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ShipmentNbr' is a known alias for 'shipment_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "OriginLoc",
+    "canonical_field": "origin_location_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'OriginLoc' is a known alias for 'origin_location_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "ShipToLoc",
+    "canonical_field": "destination_location_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ShipToLoc' is a known alias for 'destination_location_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "Item",
+    "canonical_field": "product_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Item' is a known alias for 'product_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "ShipDate",
+    "canonical_field": "shipment_date",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ShipDate' is a known alias for 'shipment_date'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "Qty",
+    "canonical_field": "volume",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Qty' is a known alias for 'volume'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "QtyUOM",
+    "canonical_field": "volume_uom",
+    "confidence": 1.0,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'QtyUOM' most closely resembles canonical field 'volume_uom' (similarity 1.00).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "Mode",
+    "canonical_field": "shipment_mode",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Mode' is a known alias for 'shipment_mode'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  },
+  {
+    "raw_column": "Direction",
+    "canonical_field": "direction",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Direction' is a known alias for 'direction'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.923322+00:00"
+  }
+]

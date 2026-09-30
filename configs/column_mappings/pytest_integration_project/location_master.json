@@ -1,0 +1,92 @@
+[
+  {
+    "raw_column": "LocID",
+    "canonical_field": "location_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'LocID' is a known alias for 'location_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "LocName",
+    "canonical_field": "location_name",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'LocName' is a known alias for 'location_name'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "FacType",
+    "canonical_field": "location_type",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'FacType' is a known alias for 'location_type'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "City_Raw",
+    "canonical_field": "city",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'City_Raw' is a known alias for 'city'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "ST",
+    "canonical_field": "state",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ST' is a known alias for 'state'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "ZIP",
+    "canonical_field": "postal_code",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ZIP' is a known alias for 'postal_code'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "Ctry",
+    "canonical_field": "country",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Ctry' is a known alias for 'country'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "Lat",
+    "canonical_field": "latitude",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Lat' is a known alias for 'latitude'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  },
+  {
+    "raw_column": "Lon",
+    "canonical_field": "longitude",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Lon' is a known alias for 'longitude'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.162234+00:00"
+  }
+]

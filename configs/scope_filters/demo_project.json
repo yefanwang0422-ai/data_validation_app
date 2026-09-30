@@ -1,0 +1,58 @@
+{
+  "shipment_history": [
+    {
+      "type": "include_values",
+      "field": "product_category",
+      "description": "",
+      "values": [
+        "'Boosters'",
+        "'Packaged Explosives'",
+        "'Cord'"
+      ],
+      "id": "3afc09b3"
+    },
+    {
+      "type": "include_values",
+      "field": "shipment_date",
+      "description": "",
+      "values": [
+        "2025"
+      ],
+      "id": "546b802d"
+    }
+  ],
+  "product_master": [
+    {
+      "id": "0b807140",
+      "type": "include_values",
+      "field": "product_family",
+      "description": "",
+      "values": [
+        "Boosters",
+        "Packaged Explosives",
+        "Cord"
+      ]
+    }
+  ],
+  "outbound_shipment_history": [
+    {
+      "id": "cd2a1d14",
+      "type": "exclude_values",
+      "field": "service_level",
+      "description": "'Returns: Movement Type 653/654'",
+      "values": [
+        "653",
+        "654"
+      ]
+    },
+    {
+      "type": "exclude_values",
+      "field": "shipment_date",
+      "description": "2025",
+      "values": [
+        "2023"
+      ],
+      "id": "1197ca62"
+    }
+  ]
+}

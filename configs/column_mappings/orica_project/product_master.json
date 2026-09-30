@@ -1,0 +1,192 @@
+[
+  {
+    "raw_column": "Material",
+    "canonical_field": "product_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Material' is a known alias for 'product_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T16:45:09.353140+00:00"
+  },
+  {
+    "raw_column": "Material Description",
+    "canonical_field": "product_name",
+    "confidence": 0.74,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Material Description' most closely resembles canonical field 'product_name' (similarity 0.74).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Plant",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Plant'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Plant Description",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Plant Description'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "X-distr.chain status",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'X-distr.chain status'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Product Hierarchy(Global)",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Product Hierarchy(Global)'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Base Unit of Measure",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Base Unit of Measure'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "X-Plant Matl Status",
+    "canonical_field": "product_status",
+    "confidence": 0.62,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'X-Plant Matl Status' most closely resembles canonical field 'product_status' (similarity 0.62).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Gross Weight",
+    "canonical_field": "weight",
+    "confidence": 0.96,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Gross Weight' most closely resembles canonical field 'weight' (similarity 0.96).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Net Weight",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Net Weight'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Weight Unit",
+    "canonical_field": "weight_uom",
+    "confidence": 0.95,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Weight Unit' most closely resembles canonical field 'weight_uom' (similarity 0.95).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Weighting group",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Weighting group'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Critical Part",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Critical Part'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Material Status",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Material Status'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Deletion Indicator(Plant)",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Deletion Indicator(Plant)'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "MRP Type",
+    "canonical_field": "pallet_type",
+    "confidence": 0.56,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'MRP Type' most closely resembles canonical field 'pallet_type' (similarity 0.56).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "MRP profile",
+    "canonical_field": "product_family",
+    "confidence": 0.57,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'MRP profile' most closely resembles canonical field 'product_family' (similarity 0.57).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "MRP Controller",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'MRP Controller'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  },
+  {
+    "raw_column": "Material Count",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Material Count'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.323464+00:00"
+  }
+]

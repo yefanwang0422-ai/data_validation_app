@@ -1,0 +1,145 @@
+dataset: product_master
+canonical_fields:
+  # ---- Identifiers ----
+  - name: product_id
+    type: string
+    required: true
+    description: Unique product identifier (SKU / Item Number)
+    optilogic_field: ProductName
+  - name: product_name
+    type: string
+    required: true
+    description: Product display name / description
+    optilogic_field: ProductName
+  - name: upc
+    type: string
+    required: false
+    description: Universal Product Code / barcode
+  - name: product_status
+    type: string
+    required: false
+    description: Active / Discontinued / Pending
+  - name: product_category
+    type: string
+    required: false
+    description: Product category
+    optilogic_field: ProductCategory
+  - name: product_family
+    type: string
+    required: false
+    description: Product family/group
+  - name: product_group
+    type: string
+    required: false
+    description: Product grouping for planning
+  - name: brand
+    type: string
+    required: false
+    description: Brand name
+  - name: product_line
+    type: string
+    required: false
+    description: Product line or sub-brand
+  # ---- Physical dimensions ----
+  - name: weight
+    type: float
+    required: true
+    description: Unit weight
+    optilogic_field: Weight
+  - name: weight_uom
+    type: string
+    required: false
+    description: Weight unit of measure (LB, KG, OZ)
+    optilogic_field: WeightUOM
+  - name: length
+    type: float
+    required: false
+    description: Unit length
+    optilogic_field: Length
+  - name: width
+    type: float
+    required: false
+    description: Unit width
+    optilogic_field: Width
+  - name: height
+    type: float
+    required: false
+    description: Unit height
+    optilogic_field: Height
+  - name: dimension_uom
+    type: string
+    required: false
+    description: Dimension unit of measure (IN, CM, MM)
+  - name: volume
+    type: float
+    required: false
+    description: Unit cubic volume
+  - name: volume_uom
+    type: string
+    required: false
+    description: Volume unit of measure (CF, CBM)
+  # ---- Packaging ----
+  - name: units_per_case
+    type: float
+    required: false
+    description: Units per inner pack / case
+  - name: cases_per_pallet
+    type: float
+    required: false
+    description: Cases per pallet
+  - name: units_per_pallet
+    type: float
+    required: false
+    description: Total units per pallet (pallet conversion factor)
+    optilogic_field: UnitsPerPallet
+  - name: pallet_type
+    type: string
+    required: false
+    description: Pallet type (GMA, Euro, etc.)
+  # ---- Pricing & cost ----
+  - name: unit_cost
+    type: float
+    required: false
+    description: Standard unit cost
+  - name: unit_price
+    type: float
+    required: false
+    description: Standard list price
+  - name: currency
+    type: string
+    required: false
+    description: Currency code for cost/price
+  # ---- Compliance / handling ----
+  - name: hazmat_flag
+    type: string
+    required: false
+    description: Hazardous material flag (Y/N)
+  - name: temperature_class
+    type: string
+    required: false
+    description: Temperature requirement (Frozen, Refrigerated, Ambient, Heated)
+  - name: storage_class
+    type: string
+    required: false
+    description: Storage class / commodity class
+  - name: freight_class
+    type: string
+    required: false
+    description: NMFC freight class for LTL shipments
+  # ---- Planning ----
+  - name: lead_time_days
+    type: float
+    required: false
+    description: Replenishment lead time in days
+  - name: shelf_life_days
+    type: float
+    required: false
+    description: Product shelf life in days
+  - name: abc_class
+    type: string
+    required: false
+    description: ABC classification (A=high velocity, C=low velocity)
+  - name: created_date
+    type: date
+    required: false
+    description: Record creation date

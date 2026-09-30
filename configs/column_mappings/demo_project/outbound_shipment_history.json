@@ -1,0 +1,362 @@
+[
+  {
+    "raw_column": "Truck Grouping",
+    "canonical_field": "tracking_number",
+    "confidence": 0.67,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Truck Grouping' most closely resembles canonical field 'tracking_number' (similarity 0.67).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Material Document",
+    "canonical_field": "product_id",
+    "confidence": 0.69,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Material Document' most closely resembles canonical field 'product_id' (similarity 0.69).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Type",
+    "canonical_field": "direction",
+    "confidence": 0.57,
+    "source": "manual_override",
+    "rationale": "Fuzzy match: 'Type' most closely resembles canonical field 'volume' (similarity 0.57).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Movement Type",
+    "canonical_field": "service_level",
+    "confidence": 0,
+    "source": "manual_override",
+    "rationale": "No confident canonical match found for 'Movement Type'.",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-30T19:54:33.937166+00:00"
+  },
+  {
+    "raw_column": "Movement Type Text",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Movement Type Text'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Hierarchy",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Hierarchy'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Material",
+    "canonical_field": "product_id",
+    "confidence": 0,
+    "source": "manual_override",
+    "rationale": "No confident canonical match found for 'Material'.",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Material Description",
+    "canonical_field": "product_name",
+    "confidence": 0.74,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Material Description' most closely resembles canonical field 'product_name' (similarity 0.74).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Plant",
+    "canonical_field": "origin_location_id",
+    "confidence": 0.67,
+    "source": "manual_override",
+    "rationale": "Fuzzy match: 'Plant' most closely resembles canonical field 'lane_id' (similarity 0.67).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Plant Name",
+    "canonical_field": "origin_location_name",
+    "confidence": 0,
+    "source": "manual_override",
+    "rationale": "No confident canonical match found for 'Plant Name'.",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Storage Location",
+    "canonical_field": "origin_location_id",
+    "confidence": 0.73,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Storage Location' most closely resembles canonical field 'origin_location_id' (similarity 0.73).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Quantity",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Quantity'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Amt.in Loc.Cur.",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Amt.in Loc.Cur.'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Conversion Factor",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Conversion Factor'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Conversion Units",
+    "canonical_field": "weight_uom",
+    "confidence": 0,
+    "source": "manual_override",
+    "rationale": "No confident canonical match found for 'Conversion Units'.",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "KG Conversion",
+    "canonical_field": "weight_shipped",
+    "confidence": 0,
+    "source": "manual_override",
+    "rationale": "No confident canonical match found for 'KG Conversion'.",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Base Unit of Measure",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Base Unit of Measure'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Batch",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Batch'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Posting Date",
+    "canonical_field": "order_date",
+    "confidence": 0.67,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Posting Date' most closely resembles canonical field 'order_date' (similarity 0.67).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Document Date",
+    "canonical_field": "shipment_date",
+    "confidence": 0.64,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Document Date' most closely resembles canonical field 'shipment_date' (similarity 0.64).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "User Name",
+    "canonical_field": "origin_location_name",
+    "confidence": 0.7,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'User Name' most closely resembles canonical field 'origin_location_name' (similarity 0.70).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Customer",
+    "canonical_field": "destination_location_id",
+    "confidence": 0.59,
+    "source": "manual_override",
+    "rationale": "Fuzzy match: 'Customer' most closely resembles canonical field 'order_id' (similarity 0.59).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Customer Name",
+    "canonical_field": "destination_location_name",
+    "confidence": 0.61,
+    "source": "manual_override",
+    "rationale": "Fuzzy match: 'Customer Name' most closely resembles canonical field 'carrier_name' (similarity 0.61).",
+    "approved": true,
+    "approver": "manual_review",
+    "timestamp": "2026-07-24T17:57:54.704510+00:00"
+  },
+  {
+    "raw_column": "Customer Address",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Customer Address'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Bill of Lading",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Bill of Lading'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Reference",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Reference'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Sales Order",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Sales Order'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Sales order item",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Sales order item'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Document Header Text",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Document Header Text'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Purchase order",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Purchase order'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Supplier",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Supplier'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Supplier Name",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Supplier Name'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Supplier Address",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Supplier Address'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Sales Order2",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Sales Order2'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Company Code",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Company Code'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  },
+  {
+    "raw_column": "Note",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Note'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-09-30T13:17:30.075629+00:00"
+  }
+]

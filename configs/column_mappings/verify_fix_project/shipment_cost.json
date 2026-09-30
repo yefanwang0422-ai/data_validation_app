@@ -1,0 +1,52 @@
+[
+  {
+    "raw_column": "ShipmentNbr",
+    "canonical_field": "shipment_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ShipmentNbr' is a known alias for 'shipment_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.954604+00:00"
+  },
+  {
+    "raw_column": "Amount",
+    "canonical_field": "cost_amount",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Amount' is a known alias for 'cost_amount'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.954604+00:00"
+  },
+  {
+    "raw_column": "Curr",
+    "canonical_field": "currency",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Curr' is a known alias for 'currency'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.954604+00:00"
+  },
+  {
+    "raw_column": "CostType",
+    "canonical_field": "cost_type",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'CostType' is a known alias for 'cost_type'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.954604+00:00"
+  },
+  {
+    "raw_column": "CarrierVendor",
+    "canonical_field": "vendor_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'CarrierVendor' is a known alias for 'vendor_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:16:15.954604+00:00"
+  }
+]

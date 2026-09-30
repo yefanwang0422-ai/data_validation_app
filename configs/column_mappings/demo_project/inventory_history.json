@@ -1,0 +1,112 @@
+[
+  {
+    "raw_column": "Plant",
+    "canonical_field": "location_id",
+    "confidence": 0.83,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Plant' most closely resembles canonical field 'location_id' (similarity 0.83).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Plant Name",
+    "canonical_field": "location_name",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Plant Name' is a known alias for 'location_name'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Sheet",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Sheet'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Iteration",
+    "canonical_field": "product_name",
+    "confidence": 0.64,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Iteration' most closely resembles canonical field 'product_name' (similarity 0.64).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Material",
+    "canonical_field": "product_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Material' is a known alias for 'product_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Material Description",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Material Description'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Stock on Hand Qty",
+    "canonical_field": "quantity_on_hand",
+    "confidence": 0.78,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Stock on Hand Qty' most closely resembles canonical field 'quantity_on_hand' (similarity 0.78).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Stock on Hand Value",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Stock on Hand Value'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Product Hierarchy",
+    "canonical_field": "product_category",
+    "confidence": 0.65,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Product Hierarchy' most closely resembles canonical field 'product_category' (similarity 0.65).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "Product Hierarchy Description",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Product Hierarchy Description'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  },
+  {
+    "raw_column": "UoM",
+    "canonical_field": "quantity_uom",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'UoM' is a known alias for 'quantity_uom'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T17:28:08.746981+00:00"
+  }
+]

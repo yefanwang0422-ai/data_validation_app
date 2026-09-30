@@ -1,0 +1,51 @@
+connection:
+  server: mustafar
+  database: orica_2025
+  driver: ODBC Driver 17 for SQL Server
+datasets:
+  customer_master:
+    load_mode: full
+    query: "SELECT    [Customer]\n      ,[Customer Name]\n      ,[Customer Address]\n\
+      ,SUBSTRING([Customer Address],CHARINDEX(',', [Customer Address])+1,CHARINDEX(',',\
+      \ [Customer Address],CHARINDEX(',', [Customer Address])+1)-CHARINDEX(',',  [Customer\
+      \ Address])-1) CustomerCity\n,SUBSTRING([Customer Address],CHARINDEX(',', [Customer\
+      \ Address], CHARINDEX(',', [Customer Address])+1)+2,2) CustomerStateCode\n,SUBSTRING([Customer\
+      \ Address],CHARINDEX(',', [Customer Address], CHARINDEX(',', [Customer Address])+1)+5,20)\
+      \  PostalCode\n      ,[Lat]\n      ,[Long] FROM dbo.raw_CustomerMaster"
+  location_master:
+    load_mode: full
+    query: "SELECT [Site Name]\n      ,[Site]\n      ,[Address]\n      ,[Lat]\n  \
+      \    ,[Long]\n,SUBSTRING(Address,CHARINDEX(',', Address)+1,CHARINDEX(',', Address,CHARINDEX(',',\
+      \ Address)+1)-CHARINDEX(',', Address)-1) City\n,SUBSTRING(Address,CHARINDEX(',',\
+      \ Address,CHARINDEX(',', Address)+1)+2,2) State\n,SUBSTRING(Address,CHARINDEX(',',\
+      \ Address,CHARINDEX(',', Address)+1)+5,20)  PostalCode FROM dbo.RAW_LocationMaster"
+  vendor_master:
+    load_mode: full
+    query: SELECT * FROM dbo.RAW_VendorMaster
+  product_master:
+    load_mode: full
+    query: SELECT * FROM raw_productMaster
+  production_history:
+    load_mode: incremental
+    watermark_column: ProdDate
+    query: SELECT * FROM dbo.ProductionHistory
+  shipment_history:
+    load_mode: incremental
+    watermark_column: ShipDate
+    query: SELECT * FROM raw_shipmenthistory
+  shipment_cost:
+    load_mode: incremental
+    watermark_column: null
+    query: SELECT * FROM dbo.raw_ShipmentCost
+  inventory_history:
+    load_mode: incremental
+    watermark_column: SnapDate
+    query: SELECT * FROM dbo.raw_InventoryHistory
+  inbound_shipment_history:
+    load_mode: incremental
+    watermark_column: ShipDate
+    query: SELECT * FROM raw_shipmenthistory WHERE type= 'Inbound'
+  outbound_shipment_history:
+    load_mode: incremental
+    watermark_column: ShipDate
+    query: SELECT * FROM raw_shipmenthistory WHERE type= 'Outbound'

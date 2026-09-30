@@ -1,0 +1,144 @@
+dataset: inbound_shipment_history
+canonical_fields:
+  # ---- Identifiers ----
+  - name: shipment_id
+    type: string
+    required: true
+    description: Unique shipment identifier
+  - name: order_id
+    type: string
+    required: false
+    description: Associated purchase order number
+  - name: lane_id
+    type: string
+    required: false
+    description: Lane identifier (origin-destination pair key)
+  # ---- Origin / destination ----
+  - name: origin_location_id
+    type: string
+    required: true
+    description: Origin location/vendor (FK to location_master or vendor_master)
+  - name: origin_location_name
+    type: string
+    required: false
+    description: Origin facility name (denormalized)
+  - name: origin_city
+    type: string
+    required: false
+    description: Origin city
+  - name: origin_state
+    type: string
+    required: false
+    description: Origin state/province
+  - name: origin_postal_code
+    type: string
+    required: false
+    description: Origin postal code
+  - name: origin_country
+    type: string
+    required: false
+    description: Origin country
+  - name: destination_location_id
+    type: string
+    required: true
+    description: Destination facility (FK to location_master)
+  - name: destination_location_name
+    type: string
+    required: false
+    description: Destination name (denormalized)
+  - name: destination_city
+    type: string
+    required: false
+    description: Destination city
+  - name: destination_state
+    type: string
+    required: false
+    description: Destination state/province
+  - name: destination_postal_code
+    type: string
+    required: false
+    description: Destination postal code
+  - name: destination_country
+    type: string
+    required: false
+    description: Destination country
+  # ---- Product ----
+  - name: product_id
+    type: string
+    required: true
+    description: Shipped product (FK to product_master)
+  - name: product_name
+    type: string
+    required: false
+    description: Product name (denormalized)
+  - name: product_category
+    type: string
+    required: false
+    description: Product category (denormalized)
+  # ---- Volume / weight ----
+  - name: volume
+    type: float
+    required: true
+    description: Shipped quantity
+  - name: volume_uom
+    type: string
+    required: false
+    description: Unit of measure for quantity
+  - name: weight_shipped
+    type: float
+    required: false
+    description: Total weight shipped
+  - name: weight_uom
+    type: string
+    required: false
+    description: Weight unit of measure
+  - name: pallet_count
+    type: float
+    required: false
+    description: Number of pallets
+  # ---- Dates ----
+  - name: shipment_date
+    type: date
+    required: true
+    description: Actual ship date
+  - name: delivery_date
+    type: date
+    required: false
+    description: Actual delivery date
+  - name: promised_date
+    type: date
+    required: false
+    description: Promised delivery date
+  - name: order_date
+    type: date
+    required: false
+    description: Date the order was placed
+  # ---- Transportation ----
+  - name: shipment_mode
+    type: string
+    required: true
+    description: Transportation mode (Truck, Rail, Air, Ocean, Parcel, Intermodal)
+  - name: carrier_id
+    type: string
+    required: false
+    description: Carrier/vendor ID (FK to vendor_master)
+  - name: carrier_name
+    type: string
+    required: false
+    description: Carrier name (denormalized)
+  - name: service_level
+    type: string
+    required: false
+    description: Service level
+  - name: freight_class
+    type: string
+    required: false
+    description: NMFC freight class
+  - name: tracking_number
+    type: string
+    required: false
+    description: Carrier tracking / PRO number
+  - name: direction
+    type: string
+    required: false
+    description: "Flow direction — pre-filtered Inbound dataset; defaults to 'Inbound'."

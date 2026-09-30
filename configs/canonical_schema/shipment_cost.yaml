@@ -1,0 +1,91 @@
+dataset: shipment_cost
+canonical_fields:
+  # ---- Identifiers ----
+  - name: shipment_id
+    type: string
+    required: true
+    description: Shipment reference (FK to shipment_history)
+  - name: invoice_number
+    type: string
+    required: false
+    description: Carrier invoice / bill number
+  - name: cost_record_id
+    type: string
+    required: false
+    description: Unique cost record identifier
+  # ---- References ----
+  - name: vendor_id
+    type: string
+    required: false
+    description: Carrier/vendor associated with the cost (FK to vendor_master)
+  - name: carrier_name
+    type: string
+    required: false
+    description: Carrier name (denormalized)
+  - name: origin_location_id
+    type: string
+    required: false
+    description: Origin of this cost record
+  - name: destination_location_id
+    type: string
+    required: false
+    description: Destination of this cost record
+  # ---- Cost amounts ----
+  - name: cost_amount
+    type: float
+    required: true
+    description: Total cost amount (freight + all charges)
+  - name: base_freight_amount
+    type: float
+    required: false
+    description: Base linehaul / freight charge
+  - name: fuel_surcharge_amount
+    type: float
+    required: false
+    description: Fuel surcharge dollar amount
+  - name: fuel_surcharge_pct
+    type: float
+    required: false
+    description: Fuel surcharge percentage
+  - name: accessorial_amount
+    type: float
+    required: false
+    description: Total accessorial charges
+  - name: insurance_amount
+    type: float
+    required: false
+    description: Freight insurance charge
+  - name: discount_amount
+    type: float
+    required: false
+    description: Discount applied to the invoice
+  - name: currency
+    type: string
+    required: true
+    description: Currency code (USD, EUR, etc.)
+  # ---- Classification ----
+  - name: cost_type
+    type: string
+    required: false
+    description: Primary cost type (Freight, FuelSurcharge, Handling, Accessorial, Insurance)
+  - name: shipment_mode
+    type: string
+    required: false
+    description: Transportation mode (denormalized)
+  - name: service_level
+    type: string
+    required: false
+    description: Service level used for this shipment
+  # ---- Dates ----
+  - name: invoice_date
+    type: date
+    required: false
+    description: Date of invoice
+  - name: shipment_date
+    type: date
+    required: false
+    description: Ship date (denormalized)
+  - name: payment_terms
+    type: string
+    required: false
+    description: Payment terms on this invoice

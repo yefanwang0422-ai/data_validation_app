@@ -1,0 +1,56 @@
+FMIC DAT Rate Refresh – Process Documentation (Business/Process View)
+
+Background / What changed
+- We are onboarding a refreshed DAT-based lane cost source.
+- The new source provides haul costs at KMA → KMA level (Key Market Area to Key Market Area), instead of the more granular Zip3 → Zip3 lanes used historically.
+- KMA (Key Market Area) is a DAT freight-market region made up of multiple 3‑digit ZIP codes. It groups freight markets around major economic hubs rather than state boundaries.
+
+Why this creates a challenge
+- The loss of Zip3-level granularity is manageable for long haul lanes, but it creates issues for short haul:
+  - For long haul, cost behavior is relatively stable, so applying a KMA-level rate is usually reasonable.
+  - For short haul, cost-per-mile can swing significantly even within the same KMA pair. Using one KMA-level cost-per-mile for all Zip3 lanes can materially reduce accuracy.
+
+Overall approach
+We treat long haul and short haul differently.
+
+1) Long Haul (>= 250 miles)
+Goal: Use the KMA-level market rate directly.
+
+Process:
+1. Identify the origin KMA and destination KMA for the lane.
+2. Retrieve the KMA→KMA linehaul rate applicable to the lane’s mode and temperature control requirements.
+3. Apply that rate to the lane’s distance to estimate the linehaul cost per load.
+
+Why this works:
+- Long-haul pricing is less sensitive to small geographic differences within a KMA, so KMA-level lanes are an acceptable representation.
+
+2) Short Haul (< 250 miles)
+Goal: Preserve Zip3-level variation while updating it to today’s market using KMA-level pricing.
+
+High-level concept:
+- Use historical Zip3→Zip3 patterns (which capture fine-grain variation) and “scale” them so they align with current KMA-level market rates.
+
+Process:
+1. Identify the origin KMA and destination KMA.
+2. Retrieve the current KMA→KMA haul cost/rate for the lane’s mode/tempcontrol.
+3. Retrieve the historical Zip3→Zip3 short-haul rate for the same KMA pair at a similar distance (see fallback logic below).
+4. Compute a scaling factor that represents how much the market moved from the historical level to the current KMA level.
+5. Apply the scaling factor to the historical Zip3-level rate so:
+   - the Zip3-level “shape” (variation) is kept,
+   - but the overall price level reflects the most recent DAT market.
+
+Fallback logic (short haul “similar distance” lookup)
+When the exact historical lane distance match is not available, we relax the matching rules in order:
+
+1. Look for historical Zip3→Zip3 lanes with the same distance.
+2. If not found, look for distance ± 1 mile.
+3. If not found, look for distance ± 2 miles.
+4. If still not found, look for the same distance bin (10-mile ranges, e.g., 80–89).
+
+Final fallback (if distance-based historical matching still fails):
+- Use the average Zip3→Zip3 short-haul cost within the same KMA→KMA market as a baseline, and compute the scaling factor at the cost-per-load level instead of cost-per-mile.
+- Then apply that factor back to the Zip3-level rate so we still produce an adjusted estimate.
+
+Key outcome
+- Long haul: uses KMA-level rates directly.
+- Short haul: keeps Zip3-level variability (detail) but adjusts it to match current market conditions using KMA-level scaling, with structured fallback rules to ensure high coverage.

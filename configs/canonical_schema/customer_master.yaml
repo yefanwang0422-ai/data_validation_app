@@ -1,0 +1,106 @@
+dataset: customer_master
+canonical_fields:
+  # ---- Identifiers ----
+  - name: customer_id
+    type: string
+    required: true
+    description: Unique customer identifier
+    optilogic_field: CustomerName
+  - name: customer_name
+    type: string
+    required: true
+    description: Customer display name
+    optilogic_field: CustomerName
+  - name: customer_number
+    type: string
+    required: false
+    description: Customer account number (alternative ID)
+  - name: account_type
+    type: string
+    required: false
+    description: Account classification (e.g., Retail, Wholesale, Distributor)
+  - name: customer_status
+    type: string
+    required: false
+    description: Active / Inactive / On Hold
+  # ---- Contact ----
+  - name: contact_name
+    type: string
+    required: false
+    description: Primary contact person
+  - name: phone
+    type: string
+    required: false
+    description: Primary phone number
+  - name: email
+    type: string
+    required: false
+    description: Primary email address
+  # ---- Address ----
+  - name: address_line_1
+    type: string
+    required: false
+    description: Street address line 1
+  - name: address_line_2
+    type: string
+    required: false
+    description: Street address line 2 / Suite / Unit
+  - name: city
+    type: string
+    required: true
+    description: City
+    optilogic_field: City
+  - name: state
+    type: string
+    required: true
+    description: State/Province
+    optilogic_field: State
+  - name: postal_code
+    type: string
+    required: true
+    description: Postal/Zip code
+    optilogic_field: PostalCode
+  - name: country
+    type: string
+    required: true
+    description: Country
+    optilogic_field: Country
+  - name: region
+    type: string
+    required: false
+    description: Sales/Distribution region
+  - name: latitude
+    type: float
+    required: false
+    description: Geocoded latitude
+    optilogic_field: Latitude
+  - name: longitude
+    type: float
+    required: false
+    description: Geocoded longitude
+    optilogic_field: Longitude
+  # ---- Business attributes ----
+  - name: segment
+    type: string
+    required: false
+    description: Customer segment or market vertical
+  - name: credit_limit
+    type: float
+    required: false
+    description: Credit limit in base currency
+  - name: payment_terms
+    type: string
+    required: false
+    description: Standard payment terms (e.g., Net 30)
+  - name: currency
+    type: string
+    required: false
+    description: Customer currency code
+  - name: created_date
+    type: date
+    required: false
+    description: Date the customer record was created
+  - name: last_modified_date
+    type: date
+    required: false
+    description: Date the customer record was last modified

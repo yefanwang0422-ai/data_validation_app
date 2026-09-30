@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Data Flow Map</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a33;
+      --card:#101e3a;
+      --text:#e9eefc;
+      --muted:#b9c6ee;
+      --accent:#5b9bd5;
+      --accent2:#6ee7b7;
+      --warn:#fbbf24;
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 14px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1200px 700px at 20% 10%, #172a52 0%, var(--bg) 55%) fixed;
+      color:var(--text);
+    }
+
+    header{
+      padding: 28px 18px 12px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size: 26px;
+      letter-spacing: .2px;
+    }
+    .subtitle{
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 900px;
+      font-size: 14px;
+    }
+
+    .wrap{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 18px 38px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+
+    /* Flow row */
+    .flow{
+      display:flex;
+      align-items: stretch;
+      gap: 12px;
+      overflow-x:auto;
+      padding-bottom: 6px;
+      scroll-snap-type: x proximity;
+    }
+
+    .step{
+      min-width: 210px;
+      max-width: 240px;
+      background: rgba(16,30,58,.75);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 14px 12px;
+      position: relative;
+      scroll-snap-align: start;
+    }
+    .step .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(91,155,213,.18);
+      border: 1px solid rgba(91,155,213,.35);
+      color: #d8e8ff;
+      font-weight: 700;
+      font-size: 12px;
+      flex: 0 0 auto;
+    }
+    .step h3{
+      margin:0 0 8px;
+      font-size: 15px;
+      letter-spacing: .15px;
+      line-height:1.25;
+    }
+    .step p{
+      margin:0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    /* Arrow between steps */
+    .arrow{
+      flex: 0 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-width: 46px;
+      position: relative;
+    }
+    .arrow::before{
+      content:"";
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(91,155,213,.2), rgba(110,231,183,.65));
+      border-radius: 999px;
+    }
+    .arrow::after{
+      content:"";
+      position:absolute;
+      right: 4px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid rgba(110,231,183,.85);
+      filter: drop-shadow(0 0 10px rgba(110,231,183,.25));
+    }
+
+    /* Outputs section */
+    .outputs{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (max-width: 900px){
+      .outputs{ grid-template-columns: 1fr; }
+      .step{ min-width: 240px; }
+    }
+
+    .outcard{
+      background: rgba(16,30,58,.6);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .outcard h4{
+      margin:0 0 6px;
+      font-size: 14px;
+      display:flex;
+      align-items:center;
+      gap: 8px;
+    }
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(110,231,183,.12);
+      flex: 0 0 auto;
+    }
+    .outcard p{
+      margin:0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    /* Small note */
+    .note{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(251,191,36,.55);
+      background: rgba(251,191,36,.10);
+      color: #fde9a8;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    /* Print styles */
+    @media print {
+      body{ background: #fff; color:#111; }
+      .panel, .step, .outcard{ box-shadow:none; }
+      .panel{ border:1px solid #ddd; background:#fff; }
+      .step, .outcard{ background:#fff; border:1px solid #ddd; }
+      .step p, .subtitle, .outcard p{ color:#333; }
+      .arrow::before{ background:#999; }
+      .arrow::after{ border-left-color:#999; filter:none; }
+      .note{ background:#fff6dd; color:#5b3f00; border-color:#e0b55a; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Business Data Flow Map</h1>
+    <div class="subtitle">
+      This diagram explains the <strong>purpose</strong> of each stage in the end-to-end process, from collecting data to producing business insights.
+      It avoids technical details and focuses on what each step does for the business.
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" aria-label="Flow map">
+      <div class="flow" role="list">
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">1</span> Input</div>
+          <h3>Collect Data</h3>
+          <p>Bring in data from business systems, uploaded files, and partners.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">2</span> Traceability</div>
+          <h3>Store Original Data (Bronze)</h3>
+          <p>Keep a copy of data exactly as received so it remains fully traceable and auditable.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">3</span> Standardization</div>
+          <h3>Standardize & Organize (Silver)</h3>
+          <p>Align formats and field names so datasets work together consistently.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">4</span> Business Rules</div>
+          <h3>Apply Business Scope</h3>
+          <p>Decide what counts for analysis (in-scope vs out-of-scope) and record the reason.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">5</span> Understanding</div>
+          <h3>Understand Data Health</h3>
+          <p>Summarize completeness and spot anomalies and duplicates so issues are visible early.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">6</span> Quality</div>
+          <h3>Quality Checks</h3>
+          <p>Classify each record as valid, needs review, or invalid using business-friendly checks.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">7</span> Completion</div>
+          <h3>Fill Gaps with AI (when needed)</h3>
+          <p>Enrich or complete key fields and route uncertain cases to a review queue.</p>
+        </div>
+        <div class="arrow" aria-hidden="true"></div>
+
+        <div class="step" role="listitem">
+          <div class="kicker"><span class="badge">8</span> Output</div>
+          <h3>Publish Analysis-Ready Data (Gold)</h3>
+          <p>Produce a trusted, auditable dataset ready for reporting, optimization, and analytics.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Business rule reminder:</strong> “Out of scope” records are <u>not deleted</u>. They remain available for audit, but are excluded from business KPIs and insights unless explicitly included.
+      </div>
+
+      <div class="outputs" aria-label="Outputs">
+        <div class="outcard">
+          <h4><span class="dot"></span> Business Insights & KPIs</h4>
+          <p>Dashboards and metrics built from in-scope, analysis-ready data.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Exceptions & Review Queue</h4>
+          <p>A prioritized list of issues and records needing confirmation or correction.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Exports</h4>
+          <p>Downloadable outputs for downstream tools, partners, or scenario modeling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" aria-label="Legend">
+      <h2 style="margin:0 0 10px; font-size:16px;">Stage Definitions (Plain English)</h2>
+      <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+        <div class="outcard">
+          <h4><span class="dot"></span> Collect Data</h4>
+          <p>Bring in data from your sources.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Store Original Data (Bronze)</h4>
+          <p>Keep what arrived unchanged so it can always be referenced.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Standardize & Organize (Silver)</h4>
+          <p>Make datasets consistent so they can be analyzed together.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Apply Business Scope</h4>
+          <p>Mark which records should count for business analysis and why.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Understand Data Health</h4>
+          <p>Summarize patterns and flags to quickly see data quality risks.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Quality Checks</h4>
+          <p>Separate reliable records from those needing review.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Fill Gaps with AI</h4>
+          <p>Enrich missing information and route uncertain items for review.</p>
+        </div>
+        <div class="outcard">
+          <h4><span class="dot"></span> Publish Analysis-Ready Data (Gold)</h4>
+          <p>Deliver trusted data that powers insights, exports, and decisions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

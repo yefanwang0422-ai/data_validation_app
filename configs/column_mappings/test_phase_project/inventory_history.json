@@ -1,0 +1,52 @@
+[
+  {
+    "raw_column": "LocID",
+    "canonical_field": "location_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'LocID' is a known alias for 'location_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:35:27.205950+00:00"
+  },
+  {
+    "raw_column": "Item",
+    "canonical_field": "product_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Item' is a known alias for 'product_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:35:27.205950+00:00"
+  },
+  {
+    "raw_column": "SnapDate",
+    "canonical_field": "snapshot_date",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'SnapDate' is a known alias for 'snapshot_date'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:35:27.205950+00:00"
+  },
+  {
+    "raw_column": "OnHandQty",
+    "canonical_field": "quantity_on_hand",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'OnHandQty' is a known alias for 'quantity_on_hand'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:35:27.205950+00:00"
+  },
+  {
+    "raw_column": "QtyUOM",
+    "canonical_field": "quantity_uom",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'QtyUOM' is a known alias for 'quantity_uom'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T15:35:27.205950+00:00"
+  }
+]

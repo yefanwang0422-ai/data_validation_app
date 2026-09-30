@@ -1,0 +1,52 @@
+[
+  {
+    "raw_column": "Customer",
+    "canonical_field": "customer_name",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Customer' is a known alias for 'customer_name'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T19:41:13.307440+00:00"
+  },
+  {
+    "raw_column": "Customer Name",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Customer Name'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.307440+00:00"
+  },
+  {
+    "raw_column": "Customer Address",
+    "canonical_field": "",
+    "confidence": 0.0,
+    "source": "unmapped",
+    "rationale": "No confident canonical match found for 'Customer Address'.",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.307440+00:00"
+  },
+  {
+    "raw_column": "Lat",
+    "canonical_field": "latitude",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Lat' is a known alias for 'latitude'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-24T19:41:13.307440+00:00"
+  },
+  {
+    "raw_column": "Long",
+    "canonical_field": "longitude",
+    "confidence": 0.86,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'Long' most closely resembles canonical field 'longitude' (similarity 0.86).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-24T19:41:13.307440+00:00"
+  }
+]

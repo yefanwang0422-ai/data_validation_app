@@ -1,0 +1,103 @@
+dataset: inventory_history
+canonical_fields:
+  # ---- Identifiers ----
+  - name: inventory_record_id
+    type: string
+    required: false
+    description: Unique inventory snapshot record identifier
+  # ---- References ----
+  - name: location_id
+    type: string
+    required: true
+    description: Inventory location (FK to location_master)
+  - name: location_name
+    type: string
+    required: false
+    description: Location name (denormalized)
+  - name: warehouse_id
+    type: string
+    required: false
+    description: Warehouse or sub-location identifier
+  - name: zone
+    type: string
+    required: false
+    description: Warehouse zone (A, B, C or named zone)
+  - name: bin
+    type: string
+    required: false
+    description: Bin / slot / position within zone
+  - name: product_id
+    type: string
+    required: true
+    description: Product (FK to product_master)
+  - name: product_name
+    type: string
+    required: false
+    description: Product name (denormalized)
+  - name: product_category
+    type: string
+    required: false
+    description: Product category (denormalized)
+  - name: lot_number
+    type: string
+    required: false
+    description: Lot / batch number for this inventory
+  # ---- Dates ----
+  - name: snapshot_date
+    type: date
+    required: true
+    description: Date of inventory snapshot
+  - name: last_receipt_date
+    type: date
+    required: false
+    description: Date of most recent receipt into this location
+  - name: expiry_date
+    type: date
+    required: false
+    description: Lot expiry / best-before date
+  # ---- Quantities ----
+  - name: quantity_on_hand
+    type: float
+    required: true
+    description: Quantity on hand at snapshot date
+  - name: quantity_available
+    type: float
+    required: false
+    description: Available quantity (on hand minus reserved)
+  - name: quantity_reserved
+    type: float
+    required: false
+    description: Quantity reserved / committed to orders
+  - name: quantity_in_transit
+    type: float
+    required: false
+    description: Quantity in transit to this location
+  - name: quantity_on_order
+    type: float
+    required: false
+    description: Quantity on open purchase/replenishment order
+  - name: safety_stock
+    type: float
+    required: false
+    description: Safety stock level
+  - name: reorder_point
+    type: float
+    required: false
+    description: Reorder point trigger level
+  - name: max_stock
+    type: float
+    required: false
+    description: Maximum stock level
+  - name: quantity_uom
+    type: string
+    required: false
+    description: Unit of measure for all quantity fields
+  # ---- Status ----
+  - name: inventory_status
+    type: string
+    required: false
+    description: Stock status (Available, Held, Quarantine, Damaged, Expired)
+  - name: abc_class
+    type: string
+    required: false
+    description: ABC class at this location (A/B/C)

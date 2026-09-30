@@ -1,0 +1,62 @@
+[
+  {
+    "raw_column": "ProdRecID",
+    "canonical_field": "production_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ProdRecID' is a known alias for 'production_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.224986+00:00"
+  },
+  {
+    "raw_column": "PlantLoc",
+    "canonical_field": "location_id",
+    "confidence": 0.94,
+    "source": "ai_suggested",
+    "rationale": "Fuzzy match: 'PlantLoc' most closely resembles canonical field 'location_id' (similarity 0.94).",
+    "approved": false,
+    "approver": null,
+    "timestamp": "2026-07-23T17:19:46.224986+00:00"
+  },
+  {
+    "raw_column": "Item",
+    "canonical_field": "product_id",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'Item' is a known alias for 'product_id'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.224986+00:00"
+  },
+  {
+    "raw_column": "ProdDate",
+    "canonical_field": "production_date",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'ProdDate' is a known alias for 'production_date'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.224986+00:00"
+  },
+  {
+    "raw_column": "QtyProduced",
+    "canonical_field": "quantity_produced",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'QtyProduced' is a known alias for 'quantity_produced'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.224986+00:00"
+  },
+  {
+    "raw_column": "QtyUOM",
+    "canonical_field": "quantity_uom",
+    "confidence": 1.0,
+    "source": "rule_based",
+    "rationale": "Exact alias match: 'QtyUOM' is a known alias for 'quantity_uom'.",
+    "approved": true,
+    "approver": "system",
+    "timestamp": "2026-07-23T17:19:46.224986+00:00"
+  }
+]
